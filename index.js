@@ -10,8 +10,8 @@
 
 
 //  console.log(isNumberInRangeRefactor(10, 30, 17),"hello")
-//  console.log(isNumberInRangeRefactor(10, 30, 5)) 
-//  console.log(isNumberInRangeRefactor(20, 50, 24)) 
+//  console.log(isNumberInRangeRefactor(10, 30, 5))
+//  console.log(isNumberInRangeRefactor(20, 50, 24))
 //  console.log(isNumberInRangeRefactor(20, 50, 76))
 
 //  function checkPassword(password) {
@@ -171,7 +171,7 @@
 
 //    const newArray = firstArray.concat(secondArray);
  
-//    if (newArray.length > maxLength) 
+//    if (newArray.length > maxLength)
 //    {
 //    return newArray.slice(0, maxLength);
 //    }
@@ -203,7 +203,7 @@
 //    // Change code below this line
 //    for ( let i = 0; i < order.length; i += 1){
 //      total = total + order[i];
-//    } 
+//    }
 //    // Change code above this line
 //    console.log(total)
 //    return total;
@@ -389,25 +389,73 @@
 
 
 
-// *** 27/32
-function getEvenNumbers(start, end) {
-   const array = [];
-   while (start < end) {
-      if (start % 2 === 0) {
-      } else {
-         start += 1;
-      }
-      array.push(start);
-      start += 2;
-   }
-   console.log(array);
-   return array;
-    // Change code above this line
-  }
+// // *** 27/32
+// // function getEvenNumbers(start, end){
+// //    const array = [];
+// //    while (start < end) {
+// //
+// //       if (start % 2 === 0) {
+// //       } else {
+// //          start += 1;
+// //       }
+// //       array.push(start);
+// //       start += 2;
+// //    }
+// //    console.log(array);
+// //    return array;
+// //     // Change code above this line
+// //   }
 
-getEvenNumbers(2, 5) //повертає [2, 4]
-getEvenNumbers(3, 11) //повертає [4, 6, 8, 10]
-getEvenNumbers(6, 12) //повертає [6, 8, 10, 12]
-getEvenNumbers(8, 8) //повертає [8]
-getEvenNumbers(7, 7) //повертає []
-getEvenNumbers(3, 3) //повертає []
+// function getEvenNumbers(start, end){
+//    const array = [];
+//    if (start % 2 != 0) {
+//       start += 1
+//    }
+//    for (let i = start; i <= end; i += 2){
+//       array.push(i);
+//    }
+//    console.table(array);
+//    return array;
+//     // Change code above this line
+// }
+  
+// getEvenNumbers(2, 5) //повертає [2, 4]
+// getEvenNumbers(3, 11) //повертає [4, 6, 8, 10]
+// getEvenNumbers(6, 12) //повертає [6, 8, 10, 12]
+// getEvenNumbers(8, 8) //повертає [8]
+// getEvenNumbers(7, 7) //повертає []
+// getEvenNumbers(3, 3) //повертає []
+
+
+// // ** 30/32
+// function includes(array, value) {
+//   // Change code below this line
+//   for (let i = 0; i < array.length; i += 1){
+//      if (array[i] === value) {
+//         console.log('true')
+//         return true;
+//    }
+//    }
+//    console.log('false')
+//    return false;
+//   // Change code above this line
+// }
+
+// includes([1, 2, 3, 4, 5], 3) // повертає true
+// includes([1, 2, 3, 4, 5], 17) // повертає false
+// includes(["Earth", "Mars", "Venus", "Jupiter", "Saturn"], "Jupiter") // повертає true
+// includes(["Earth", "Mars", "Venus", "Jupiter", "Saturn"], "Uranus") // повертає false
+// includes(["apple", "plum", "pear", "orange"], "plum") // повертає true
+// includes(["apple", "plum", "pear", "orange"], "kiwi") // повертає false
+
+
+// *** 32/32
+// function calculateTotal(number) {
+//    // Change code below this line
+//    let num = 0 
+//    for (let i = 0; i <= number; i += 1) {
+//       num += i;
+//    }
+//    return num
+//   // Change code above this line
+// }

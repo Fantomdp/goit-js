@@ -1,3 +1,5 @@
+//'use strict';
+
 // function isNumberInRange(start, end, number) {
 //    const isInRange = (number>= start && number<=end) ; // Change this line
    
@@ -452,10 +454,178 @@
 // *** 32/32
 // function calculateTotal(number) {
 //    // Change code below this line
-//    let num = 0 
+//    let num = 0
 //    for (let i = 0; i <= number; i += 1) {
 //       num += i;
 //    }
 //    return num
 //   // Change code above this line
 // }
+
+// Mate //
+// // В Mate bank є можливість покласти гроші на депозит під певний відсоток і отримати прибуток через деякий час.
+
+// // Наприклад, якщо покласти 10000 на 3 роки під 4% річних, отримаємо:
+
+// // перший рік: 10000 + 4% = 10400 (10000 + 10000 * 0.04);
+// // другий рік: 10400 + 4% = 10816 (10400 + 10400 * 0.04);
+// // третій рік: 10816 + 4% = 11248.64 (10816 + 10816 * 0.04);
+// // чистий прибуток: 11248.64 - 10000 = 1248.64.
+
+
+// function calculateProfit(amount, percent, period) {
+//   // write code here
+//     let total = amount;
+//     for (let i = 0; i < period; i++){
+//         total += total * percent / 100;
+//     }
+//   return total-amount
+// }
+// calculateProfit(1000, 5, 1); // 50
+// calculateProfit(12500, 3, 12); // 5322
+
+
+// const word = "abcdef";
+// const part = 'bs';
+// console.log(
+//     word.includes(part),
+//     word.indexOf(part),
+//     word.lastIndexOf(part),
+//     word.startsWith(part),
+//     word.endsWith(part)
+// );
+
+// // ***
+// const model = "Apple iPhone 13";
+// const search = 'iph';
+
+// const condition = model.toLowerCase().includes(search.toLowerCase());
+
+// if (condition) {
+//     console.log('Found');
+// }
+
+// // ***
+// const message = '0123456789';
+
+// console.log(
+//     message.substr(3, 5),       //34567
+//     message.substring(3, 5),    //34
+//     message.slice(3, 5)          //34
+// );
+
+// const result = message.slice(1, -1);
+// console.log(
+//     result
+// )
+
+
+// // *** number to string
+// const x = 12345;
+
+// console.log(
+//     String(x),
+//     x.toString(),
+//     '' + x,
+//     `${x}`
+// )
+
+// const fruit = 'apple';
+// console.log(fruit[5]);
+
+
+// let text = 'Hello world, welcome to the universe.';
+// let result = text.indexOf('welcome');
+// console.log(
+//     result
+// )
+
+// //***  В JavaScript можна перевірити, чи є символ літерою чи ні.*/
+// function isLetter(ch) {
+//   return ch.toLowerCase() !== ch.toUpperCase();
+//}
+
+
+//const str = 'The quick brown fox jumps over the lazy dog.';
+//console.log(str.slice(4, 10));
+
+
+// //*** */
+// function isSubstring(phrase, part) {
+//     // write code here
+//     console.log('ss',
+//         phrase.includes(part)
+//     );
+//     return phrase.includes(part)
+// }
+// isSubstring('string', 's'); // true
+// isSubstring('string', 'ring'); // true
+// isSubstring('string', 'bring'); // false
+// isSubstring('string', 'Str'); // false, бо 'str' і 'Str'
+
+
+
+// // *** приймає рядок text та повертає кількість літер m у ньому (як великих, так і маленьких).
+// function countMs(text) {
+//   // write code here
+//   let count = 0
+//     for (const i of text) {
+//         if (i === 'm' || i === 'M') {
+//       count++
+//       }
+//   }
+//     console.log(count)
+//     return count
+// }
+// countMs('document'); // 1
+// countMs('Mermaid'); // 2 — потрібно рахувати і 'm', і 'M'
+// countMs('code'); // 0
+
+
+
+// //*** */
+// function removeVowels(doc) {
+//     let result = ''
+//     // for (let i of doc) {
+//     //     if (i != 'a' && i != 'e' && i != 'i' && i != 'o' && i != 'u' && i != 'y' && i != 'A' && i != 'E' && i !='I' && i !='O' && i !='U' && i !='Y') {
+//     //       result += i
+//     //     }
+//     // }
+// 	for (const char of doc) {
+// 		if (!'aeiouy'.includes(char.toLowerCase())) {
+// 		result += char
+// 	}
+// }
+    
+// 	return result;
+// }
+
+// removeVowels('document'); // 'dcmnt'
+// removeVowels('I like my boss'); // ' lk m bss'
+// removeVowels('350 euro'); // '350 r'
+
+//***У цьому завданні створи функцію makeAbbr, яка приймає рядок зі слів words та повертає абревіатуру з них у верхньому регістрі.
+//Рядок words містить одне або декілька слів, розділених одним пробілом. */
+
+function makeAbbr(words) {
+  // write code here
+	let result = words.slice(0, 1);
+  
+	for (let i = 1; i < words.length; i++){
+		const char = words.substr(i, 1)
+		if (char === " ") {
+			i++;
+			result += words.substr(i, 1);
+		}
+	}
+	console.log(result.toUpperCase());
+	return result.toUpperCase();
+}
+
+// 'NASA'
+makeAbbr('national aeronautics space administration');
+// 'CPU'
+makeAbbr('central processing unit');
+// 'SMILES'
+makeAbbr('simplified molecular input line entry specification');
+

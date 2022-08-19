@@ -607,25 +607,61 @@
 //***У цьому завданні створи функцію makeAbbr, яка приймає рядок зі слів words та повертає абревіатуру з них у верхньому регістрі.
 //Рядок words містить одне або декілька слів, розділених одним пробілом. */
 
-function makeAbbr(words) {
-  // write code here
-	let result = words.slice(0, 1);
+// function makeAbbr(words) {
+//   // write code here
+// 	let result = words.slice(0, 1);
   
-	for (let i = 1; i < words.length; i++){
-		const char = words.substr(i, 1)
-		if (char === " ") {
-			i++;
-			result += words.substr(i, 1);
-		}
-	}
-	console.log(result.toUpperCase());
-	return result.toUpperCase();
-}
+// 	for (let i = 1; i < words.length; i++){
+// 		const char = words.substr(i, 1)
+// 		if (char === " ") {
+// 			i++;
+// 			result += words.substr(i, 1);
+// 		}
+// 	}
+// 	console.log(result.toUpperCase());
+// 	return result.toUpperCase();
+// }
+// *** другий варіант
+// function makeAbbr(words) {
+// 	const name = ` ${words.trim()}`;
+// 	let abbr = '';
 
-// 'NASA'
-makeAbbr('national aeronautics space administration');
-// 'CPU'
-makeAbbr('central processing unit');
-// 'SMILES'
-makeAbbr('simplified molecular input line entry specification');
+// 	for (let i = 0; i < name.length; i++) {
+// 		if (name[i] === ' ') {
+// 			abbr += name[i + 1];
+// 		}
+// 	}
 
+// 	return abbr.toUpperCase();
+// }
+// // 'NASA'
+// makeAbbr('national aeronautics space administration');
+// // 'CPU'
+// makeAbbr('central processing unit');
+// // 'SMILES'
+// makeAbbr('simplified molecular input line entry specification');
+
+
+
+// // // *** Створи функцію decryptMessage, яка приймає рядок message та повертає новий рядок, де символи з message розташовані у зворотному порядку.
+// // function decryptMessage(message) {
+// // 	let result = ''
+// // 	for (const i = message.length -1; i >= 0; i -= 1){
+// // 			result += message.substr(i, 1);
+// // 	}
+// // 	return result;
+// // }
+
+// function decryptMessage2(message) {
+// 	let result = ''
+// 	for (const char of message) {
+// 		result = char + result;
+// 	}
+// 	console.log(result);
+// 	return result;
+// }
+
+// // 'We like drinking beer!!!'
+// decryptMessage2('!!!reeb gniknird ekil eW');
+// // 'A coronavirus pandemic will be in 2020'
+// decryptMessage2('0202 ni eb lliw cimednap surivanoroc A');

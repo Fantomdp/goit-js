@@ -665,3 +665,231 @@
 // decryptMessage2('!!!reeb gniknird ekil eW');
 // // 'A coronavirus pandemic will be in 2020'
 // decryptMessage2('0202 ni eb lliw cimednap surivanoroc A');
+
+
+// // ***
+// // const obj = {
+// //    a: 1 ,
+// //    b: function () {
+// //      return this.a;
+// //    },
+// //    c: () => this.a,
+// //  };
+// //  console.log(obj.b());
+// //  console.log(obj.с());
+
+// // ***Створи функцію isWerewolf, яка приймає рядок target і повертає true, якщо це перевертень, або false — якщо ні.
+
+// function isWerewolf(target) {
+//   // write code here
+// 	let direct = '';
+// 	let reversed = '';
+// 	for (const char of target) {
+// 		console.log(char.toLowerCase());
+
+// 		direct = direct + char ;
+// 		reversed = char + reversed;
+// 	}
+// 	if (direct.toLowerCase() === reversed.toLowerCase()) {
+// 		console.log('Зашибись');
+// 	}
+// 	console.log(target,direct,reversed)
+// }
+
+
+// isWerewolf('ro tator') === true // rotator --> rotator
+// isWerewolf('home') === false // home --> emoh
+// isWerewolf('Racecar') === true // регістр ігнорується
+// isWerewolf('eva, can i see bees in a cave') === true // пробіли і розділові знаки ігноруються
+// const numbers = [];
+
+// for (let i = 3; i <= 7; i++) {
+//   numbers.push(i);
+// }
+// console.log(numbers[numbers.length - 1])
+
+
+//***26/08/22 */
+// const letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g'];
+// const letter = letters[1];
+
+
+// console.log(letter)
+
+// const numbers = [2, 7, 9, 4];
+// let sum = 0;
+
+// for (const number of numbers) {
+//   sum += number;
+// }
+
+// console.log(sum)
+
+// function createArray(N) {
+//   // write code here
+// 	const numbers = [];
+	
+// 	for (let i = 1; i <= N; i += 1){
+// 		numbers.push(i);
+//   }
+// 	return numbers;
+// }
+
+// createArray(0);
+
+// // ***Щоб роботи на лінії збиралися правильно, потрібно маркувати деталі. Різні частини робота будуть складатися з різної кількості деталей. Тож зробимо наліпки для них!
+// //Напиши функцію makeStickers, яка приймає число detailsCount і рядок robotPart. Функція повинна повертати масив рядків у наступному форматі: {{robotPart}} detail #{{n}} (наприклад, Hand detail #1).
+// //Зверни увагу: якщо detailsCount = 0, поверни порожній масив.
+
+// function makeStickers(detailsCount, robotPart) {
+//   // write code here
+//   const robots_array = [];
+  
+//   if (detailsCount === 0) {
+//     return robots_array;
+//   }
+
+//   for (let i = 1; i <= detailsCount; i++) {
+//     robots_array.push(`${robotPart} detail #${i}`);
+//     console.log(`${robotPart} detail #${i}`);
+//   }
+  
+//   console.log(robots_array);
+//   return robots_array;
+// }
+
+
+// makeStickers(3, 'Body'); // ['Body detail #1', 'Body detail #2', 'Body detail #3']
+// makeStickers(4, 'Head'); // ['Head detail #1', 'Head detail #2', 'Head detail #3', 'Head detail #4']
+// makeStickers(0, 'Foot'); // []
+
+
+// // ****Наліпки готові? Чудово! Тепер потрібно збільшити продуктивність наших ліній удвічі!
+// //Напиши функцію doublePower, яка приймає масив потужностей currentPowers та повертає новий масив із подвоєними значеннями.
+
+// function doublePower(currentPowers) {
+//   // write code here
+//   const newPowers = [];
+//   for (const power of currentPowers) {
+//     newPowers.push(power*2)
+//     console.log(power*2);
+//   }
+//   console.log(newPowers);
+//   return newPowers;
+// }
+
+// doublePower([100, 150, 200, 220]); // [200, 300, 400, 440]
+// doublePower([45, 34, 56, 67]); // [90, 68, 112, 134]
+// doublePower([]); // []
+
+
+// // ***А тепер навчимо наших роботів сортувати коробки на складі. Кожна коробка має свій унікальний номер, а роботи вчаться сортувати в порядку зростання.
+// //Але сортування — справа нелегка, іноді трапляються помилки. Тому нам поки що доведеться перевіряти, чи правильно робот відсортував коробки.
+// //Для цього напиши функцію isSorted, яка отримує масив чисел boxNumbers і повертає true, якщо всі числа розташовані в порядку зростання, або false — якщо ні.
+// //Зверни увагу: числа в масиві можуть повторюватися.
+// function isSorted(boxNumbers) {
+//   // write code here
+//   if (boxNumbers[0] < 0){
+//     return true;
+//   }
+//   let number = boxNumbers[0];
+
+//   for (let i = 1; i < boxNumbers.length; i++){
+//     if (number <= boxNumbers[i]) {
+//       number = boxNumbers[i];
+//     } else {
+//       return false;
+//     }
+//     console.log(boxNumbers[i]);
+//   }
+//   return true;
+// }
+
+// isSorted([1, 2, 3, 4, 5]); // true
+// isSorted([0, 1, 1, 1, 2]); // true
+// isSorted([1, 2, 11]); // true
+// isSorted([5]); // true
+// isSorted([]); // true
+// isSorted([0, 3, 1, 2, 2, 2]); // false
+// isSorted([1, 11, 2]); // false
+
+
+// ***
+// Ускладнюємо роботу нашого робота! Тепер він вміє перетворювати команди руху на правильний сигнал і рухатися відповідно до нього:
+// 'forward' означає y + 1 (крок уперед);
+// 'back' означає y - 1 (крок назад);
+// 'right' означає x + 1 (крок праворуч);
+// 'left' означає x - 1 (крок ліворуч).
+// Але було б чудово, щоб робот знав, де він знаходиться навіть без GPS.
+// Для цього реалізуй функцію getLocation, яка приймає 2 параметри:
+// масив початкових координат coordinates у вигляді [x, y];
+// масив із командами commands у вигляді ['command1', 'command2', 'command3' ...].
+// Функція повинна повертати масив кінцевих координат [x, y] після рухів згідно команд із масиву commands.
+// Наприклад, ми маємо масив із координатами coordinates = [2, 1] та масив із командами commands = ['left', 'back', 'back']:
+// координати після першої команди — [1, 1] (1 крок ліворуч);
+// координати після другої команди — [1, 0] (1 крок назад);
+// координати після третьої команди — [1, -1] (1 крок назад);
+// результатом буде масив [1, -1].
+// function getLocation(coordinates, commands) {
+//   // write code here
+//   let a = 4;
+//   console.log(Math.sqrt(-4))
+// }
+
+// // alert( "1"[0] )
+
+// getLocation([0, 0], ['forward', 'right']); // [1, 1]
+// getLocation([2, 3], ['back', 'back', 'back', 'right']); // [3, 0]
+// getLocation([0, 5], ['back', 'back', 'back', 'right', 'left', 'forward']); // [0, 3]
+
+// let a = [1,2]
+
+//   (function () { alert(a) })  ()
+//   console.log(a)
+
+// console.log(null == undefined)
+
+// let obj = { '1': 0, 1: 1, 0: 2 };
+// alert(obj['1']);
+
+// let x = 5;
+// alert( x++ );
+
+// alert(+"Infinity");
+
+// f.call(f);
+// function f() {
+//   alert( this );
+// }
+
+// alert(str); // ?
+// console.log(str);
+// var str = "Hello";
+
+// let name = "пупкин".replace("п", "д")
+// console.log([] )
+// console.log('[] + false', [] + false)
+// console.log([] + false - null)
+// console.log(true - null)
+// console.log(0 - null)
+// console.log([] + false - null + true)
+
+// console.log(typeof (null))
+// let Apple = 0
+
+// alert( 20e-1['toString'](2) )
+// console.log([] + 1 + 2)
+
+// let a = X;
+// alert(a == X); // false
+
+// let str = "Hello";
+// str.something = 5;
+// alert(str.something);
+
+
+var х =1;
+alert (x++);
+
+var b =1;
+alert (b+=1);
